@@ -1,6 +1,6 @@
 module github.com/stellaraf/zonebackup
 
-go 1.22
+go 1.22.1
 
 require (
 	github.com/cloudflare/cloudflare-go v0.96.0
