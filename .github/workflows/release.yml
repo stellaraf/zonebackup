@@ -10,7 +10,9 @@ permissions:
 
 jobs:
     goreleaser:
-        runs-on: ubuntu-latest
+        runs-on: codebuild-stellaraf-actions-public-${{ github.run_id }}-${{ github.run_attempt }}
+        env:
+          GOPATH: ${{ runner.temp }}/go
         steps:
             - name: Checkout
               uses: actions/checkout@v4
